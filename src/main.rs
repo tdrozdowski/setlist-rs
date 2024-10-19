@@ -12,7 +12,7 @@ async fn main() {
     println!("Response: {:?}", response);
     let response_text = response.text().await.expect("Failed to get response text");
     //println!("Response text: {}", response_text);
-    let selector = Selector::parse(r##"#id29"##).unwrap();
+    let selector = Selector::parse("div").unwrap();
     let setlist_class = CssLocalName::from("setlistList");
     let song_label_class = CssLocalName::from("songLabel");
 
