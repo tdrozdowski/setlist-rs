@@ -5,10 +5,12 @@ edition = "2021"
 
 [dependencies]
 
-chrono = { version = "0.4", features = ["serde"]}
-reqwest = { version = "0.12", features = ["json"]}
+chrono = { version = "0.4", features = ["serde"] }
+dotenv = "0.15.0"
+jsonwebtoken = "9.3.0"
+reqwest = { version = "0.12", features = ["json"] }
 scraper = "0.20.0"
-serde = { version = "1.0.210", features = ["serde_derive"]}
-serde_json = { version = "1.0.130", features = ["std"]}
-tokio = { version = "1", features = ["full"]}
+serde = { version = "1.0.210", features = ["serde_derive"] }
+serde_json = { version = "1.0.130", features = ["std"] }
+tokio = { version = "1", features = ["full"] }
 
