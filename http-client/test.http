@@ -1,0 +1,9 @@
+GET https://api.music.apple.com/v1/test
+Authorization: Bearer  {{token}}
+
+###
+
+GET https://api.music.apple.com/v1/catalog/US/search?term=Stabbing+Westward+Shame
+Authorization: Bearer {{token}}
+
+###

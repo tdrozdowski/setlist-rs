@@ -101,8 +101,9 @@ async fn create_jwt(apple_api: AppleApi) -> String {
     let private_key = jsonwebtoken::EncodingKey::from_ec_pem(private_key.as_bytes()).expect("Failed to parse private key");
     let mut header = jsonwebtoken::Header::new(jsonwebtoken::Algorithm::ES256);
     header.kid = Some(apple_api.key_id);
-    let now = Utc::now().timestamp_millis();
-    let expires_at = now + 60 * 60 * 1000;
+    header.typ = None;
+    let now = Utc::now().timestamp();
+    let expires_at = now + 60 * 60;
     let payload = Claims {
         iss: apple_api.team_id.to_string(),
         exp: expires_at,
